@@ -14,6 +14,7 @@
 		1D8E64941E3CAB5500F8F579 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D8E64921E3CAB5500F8F579 /* Main.storyboard */; };
 		1D8E649F1E3CAB5500F8F579 /* EternalClipboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8E649E1E3CAB5500F8F579 /* EternalClipboardTests.swift */; };
 		1D8E64AA1E3CAB5500F8F579 /* EternalClipboardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8E64A91E3CAB5500F8F579 /* EternalClipboardUITests.swift */; };
+		1D9F964E1E3CFEC000E70A35 /* PasteboardStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9F964D1E3CFEC000E70A35 /* PasteboardStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		1D8E64A51E3CAB5500F8F579 /* EternalClipboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EternalClipboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8E64A91E3CAB5500F8F579 /* EternalClipboardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EternalClipboardUITests.swift; sourceTree = "<group>"; };
 		1D8E64AB1E3CAB5500F8F579 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D9F964D1E3CFEC000E70A35 /* PasteboardStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PasteboardStorage.swift; path = Classes/PasteboardStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				1D8E648C1E3CAB5500F8F579 /* AppDelegate.swift */,
+				1D9F964D1E3CFEC000E70A35 /* PasteboardStorage.swift */,
 				1D8E648E1E3CAB5500F8F579 /* ViewController.swift */,
 				1D8E64901E3CAB5500F8F579 /* Assets.xcassets */,
 				1D8E64921E3CAB5500F8F579 /* Main.storyboard */,
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D9F964E1E3CFEC000E70A35 /* PasteboardStorage.swift in Sources */,
 				1D8E648F1E3CAB5500F8F579 /* ViewController.swift in Sources */,
 				1D8E648D1E3CAB5500F8F579 /* AppDelegate.swift in Sources */,
 				1D89DB661E3CB9CA00ACFF8E /* PasteboardObserver.swift in Sources */,

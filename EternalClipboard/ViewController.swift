@@ -9,19 +9,11 @@
 import Cocoa
 
 class ViewController: NSViewController {
+  fileprivate let pasteboardStorage = PasteboardStorage(initialHistory: [])
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-
-    // Do any additional setup after loading the view.
+  @IBAction func onClick(_ sender: NSButton) {
+    print(pasteboardStorage.history)
   }
-
-  override var representedObject: Any? {
-    didSet {
-    // Update the view, if already loaded.
-    }
-  }
-
 
 }
 

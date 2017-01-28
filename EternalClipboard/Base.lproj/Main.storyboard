@@ -694,7 +694,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="click:" target="XfG-lQ-9wD" id="3hR-jG-EdU"/>
+                                    <action selector="onClick:" target="XfG-lQ-9wD" id="Ll6-9o-Zr7"/>
                                 </connections>
                             </button>
                         </subviews>
