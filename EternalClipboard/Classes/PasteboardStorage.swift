@@ -10,7 +10,7 @@ import Cocoa
 
 class PasteboardStorage: NSObject, PasteboardObserverDelegate {
   fileprivate var observer: PasteboardObserver?
-  public var history: [String]
+  private(set) public var history: [String]
 
   init(initialHistory: [String]) {
     history = initialHistory
