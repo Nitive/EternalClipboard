@@ -13,9 +13,9 @@ protocol PasteboardObserverDelegate {
 }
 
 class PasteboardObserver: NSObject {
-  fileprivate let timeInterval = TimeInterval(0.65)
-  fileprivate let delegate: PasteboardObserverDelegate
-  fileprivate var lastPasteboardItem: String?
+  private let timeInterval = TimeInterval(0.65)
+  private let delegate: PasteboardObserverDelegate
+  private var lastPasteboardItem: String?
 
   init(delegate: PasteboardObserverDelegate) {
     self.delegate = delegate
@@ -23,11 +23,11 @@ class PasteboardObserver: NSObject {
     startObserving()
   }
 
-  fileprivate func startObserving() {
+  private func startObserving() {
     Timer.scheduledTimer(withTimeInterval: timeInterval, repeats: true, block: self.update)
   }
 
-  fileprivate func update(timer: Timer) {
+  private func update(timer: Timer) {
     if let copiedText = getPasteboardContext() {
       if (copiedText != lastPasteboardItem) {
         self.delegate.pasteboardUpdated(pasteboard: copiedText)
@@ -36,7 +36,7 @@ class PasteboardObserver: NSObject {
     }
   }
 
-  fileprivate func getPasteboardContext() -> String? {
+  private func getPasteboardContext() -> String? {
     return NSPasteboard.general().string(forType: NSPasteboardTypeString)
   }
 }

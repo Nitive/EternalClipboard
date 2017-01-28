@@ -9,13 +9,12 @@
 import Cocoa
 
 class PasteboardStorage: NSObject, PasteboardObserverDelegate {
-  fileprivate var observer: PasteboardObserver?
   private(set) public var history: [String]
 
   init(initialHistory: [String]) {
     history = initialHistory
     super.init()
-    observer = PasteboardObserver(delegate: self)
+    let _ = PasteboardObserver(delegate: self)
   }
 
   func addPasteboardToHistory(_ pasteboard: String) {
