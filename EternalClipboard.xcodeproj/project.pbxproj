@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D89DB661E3CB9CA00ACFF8E /* PasteboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D89DB651E3CB9CA00ACFF8E /* PasteboardObserver.swift */; };
 		1D8E648D1E3CAB5500F8F579 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8E648C1E3CAB5500F8F579 /* AppDelegate.swift */; };
 		1D8E648F1E3CAB5500F8F579 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8E648E1E3CAB5500F8F579 /* ViewController.swift */; };
 		1D8E64911E3CAB5500F8F579 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D8E64901E3CAB5500F8F579 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D89DB651E3CB9CA00ACFF8E /* PasteboardObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PasteboardObserver.swift; path = Classes/PasteboardObserver.swift; sourceTree = "<group>"; };
 		1D8E64891E3CAB5500F8F579 /* EternalClipboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EternalClipboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8E648C1E3CAB5500F8F579 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D8E648E1E3CAB5500F8F579 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				1D8E64901E3CAB5500F8F579 /* Assets.xcassets */,
 				1D8E64921E3CAB5500F8F579 /* Main.storyboard */,
 				1D8E64951E3CAB5500F8F579 /* Info.plist */,
+				1D89DB651E3CB9CA00ACFF8E /* PasteboardObserver.swift */,
 			);
 			path = EternalClipboard;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			files = (
 				1D8E648F1E3CAB5500F8F579 /* ViewController.swift in Sources */,
 				1D8E648D1E3CAB5500F8F579 /* AppDelegate.swift in Sources */,
+				1D89DB661E3CB9CA00ACFF8E /* PasteboardObserver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +500,7 @@
 				1D8E64B01E3CAB5500F8F579 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D8E64B11E3CAB5500F8F579 /* Build configuration list for PBXNativeTarget "EternalClipboardTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +509,7 @@
 				1D8E64B31E3CAB5500F8F579 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D8E64B41E3CAB5500F8F579 /* Build configuration list for PBXNativeTarget "EternalClipboardUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +518,7 @@
 				1D8E64B61E3CAB5500F8F579 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

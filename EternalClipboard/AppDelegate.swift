@@ -9,9 +9,17 @@
 import Cocoa
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, PasteboardObserverDelegate {
+  fileprivate var observer: PasteboardObserver?
 
-
+  override init() {
+    super.init()
+    observer = PasteboardObserver(delegate: self)
+  }
+  
+  func pasteboardUpdated(pasteboard: String) {
+    print("update", pasteboard)
+  }
 
   func applicationDidFinishLaunching(_ aNotification: Notification) {
     // Insert code here to initialize your application
