@@ -17,11 +17,11 @@ class PasteboardStorage: NSObject, PasteboardObserverDelegate {
     let _ = PasteboardObserver(delegate: self)
   }
 
-  func addPasteboardToHistory(_ pasteboard: String) {
+  internal func addPasteboardToHistory(_ pasteboard: String) {
     history = history.filter({ $0 != pasteboard }) + [pasteboard]
   }
 
-  func pasteboardUpdated(pasteboard: String) {
+  internal func pasteboardUpdated(pasteboard: String) {
     addPasteboardToHistory(pasteboard)
   }
 }
