@@ -34,7 +34,7 @@ class ViewController: NSViewController {
   }
 
   internal func openSearch() {
-    print("yeah")
+    NSRunningApplication.current().activate(options: [NSApplicationActivationOptions.activateIgnoringOtherApps])
   }
 
   @IBAction func onClick(_ sender: NSButton) {
