@@ -13,6 +13,10 @@ protocol PasteboardObserverDelegate {
 }
 
 class PasteboardObserver: NSObject {
+  public func manualUpdate() {
+    update();
+  }
+
   private let timeInterval = TimeInterval(0.65)
   private let delegate: PasteboardObserverDelegate
   private var lastPasteboardItem: String?
@@ -24,10 +28,10 @@ class PasteboardObserver: NSObject {
   }
 
   private func startObserving() {
-    Timer.scheduledTimer(withTimeInterval: timeInterval, repeats: true, block: self.update)
+    Timer.scheduledTimer(withTimeInterval: timeInterval, repeats: true, block: { _ in self.update() })
   }
 
-  private func update(timer: Timer) {
+  private func update() {
     if let copiedText = getPasteboardContext() {
       if (copiedText != lastPasteboardItem) {
         self.delegate.pasteboardUpdated(pasteboard: copiedText)
