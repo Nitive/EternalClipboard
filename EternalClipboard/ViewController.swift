@@ -16,12 +16,28 @@ func observeGlobalKeyDows(_ handler: @escaping (_ event: NSEvent) -> Void) {
 }
 
 
-class ViewController: NSViewController {
-  fileprivate let pasteboardStorage = PasteboardStorage(initialHistory: [])
+class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
+  private let pasteboardStorage = PasteboardStorage(initialHistory: [])
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    pasteboardStorage.manualUpdate();
     observeGlobalKeyDows(onKeyDown)
+    tableView.delegate = self
+    tableView.dataSource = self;
+  }
+
+  @IBOutlet weak var tableView: NSTableView!
+
+  func numberOfRows(in tableView: NSTableView) -> Int {
+    return pasteboardStorage.history.count
+  }
+
+  func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+    let cell = tableView.make(withIdentifier: "clipboardContent", owner: self) as! NSTableCellView
+    let reversedIndex = pasteboardStorage.history.count - row - 1
+    cell.textField?.stringValue = pasteboardStorage.history[reversedIndex]
+    return cell
   }
 
   internal func onKeyDown(event: NSEvent) {
@@ -35,11 +51,8 @@ class ViewController: NSViewController {
 
   internal func openSearch() {
     NSRunningApplication.current().activate(options: [NSApplicationActivationOptions.activateIgnoringOtherApps])
+    pasteboardStorage.manualUpdate();
+    tableView.reloadData()
   }
-
-  @IBAction func onClick(_ sender: NSButton) {
-    print(pasteboardStorage.history)
-  }
-
 }
 
